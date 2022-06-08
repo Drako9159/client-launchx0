@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    
+    <nav class="navbar navbar-expand bg-white banner0">
+      <router-link to="/" class="navbar-brand onTitle">LaunchX</router-link>
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <router-link to="/explorers" class="nav-link">Explorers</router-link>
+        </li>
+        <li class="nav-item">
+          
+          <router-link to="/commanders" class="nav-link">Commanders</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/addExplorer" class="nav-link">New Explorer</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/addCommander" class="nav-link">New Commander</router-link>
+        </li>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <router-view />
+    </div>
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "app"
+};
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.banner0{
+  background: linear-gradient(80deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 35%, rgb(0, 42, 90) 100%);
+}
+.onTitle{
+  color: white;
 }
 </style>
